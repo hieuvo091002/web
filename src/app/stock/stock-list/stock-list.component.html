@@ -1,0 +1,12 @@
+<h3>Stock Tracker</h3>
+<form #stockForm="ngForm" class="container">
+    <app-stock-item [(ngModel)]="stock.favorite" *ngFor="let stock of stocks" [stock]=stock name="{{stock.code}}">
+    </app-stock-item>
+</form>
+<h3>Favorite</h3>
+<div class="container">
+    <div *ngFor="let s of stocks">
+        <app-stock-item [stock]=s *ngIf="s.favorite">
+        </app-stock-item>
+    </div>
+</div>

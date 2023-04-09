@@ -1,0 +1,35 @@
+<form [formGroup]="stockForm" (ngSubmit)="addStock()">
+    <input type="text" name="name" placeholder="Stock Name" formControlName="name">
+    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+
+        <div *ngIf="name.errors?.['required']">
+            Stock price is mandatory.
+        </div>
+        <div *ngIf="name.errors?.['minlength']">
+            Name must be at least 3 characters long.
+        </div>
+    </div>
+    <input type="text" name="code" placeholder="Code" formControlName="code">
+    <div *ngIf="code.invalid && (code.dirty || code.touched)" class="alert">
+
+        <div *ngIf="code.errors?.['required']">
+            Code is required.
+        </div>
+        <div *ngIf="code.errors?.['minlength']">
+            Code must be at least 2 characters long.
+        </div>
+    </div>
+    <input type="number" name="price" placeholder="Price" formControlName="price">
+    <select name="exchange" formControlName="exchange">
+        <option value="NASDAQ">NASDAQ</option>
+        <option value="NYSE">NYSE</option>
+        <option value="OTHER">OTHER</option>
+    </select>
+    <input type="checkbox" id="chkReactive" #chk formControlName="confirm">
+    <label for="chkReactive">I confirm that the information provided above is accurate!</label>
+    <button type="submit" [disabled]="!stockForm.valid || !chk.checked">Create</button>
+</form>
+
+<p>stock name is: {{stockForm.value|json}}<br></p>
+<p>data has been confirmed: {{stockForm.status}}<br></p>
+<p>create: {{chk.checked}}<br></p>

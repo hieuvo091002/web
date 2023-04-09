@@ -1,0 +1,31 @@
+.stock-container {
+    display: block;
+    margin: auto;
+    padding: 10px 50px;
+    color: #ecf0f1;
+    margin: 20px;
+    border-radius: 5px ;
+}
+
+.name {
+    font-weight: 600;
+}
+
+.positive {
+    background-color: rgb(37, 110, 37);
+}
+
+.negative {
+    background-color: rgb(158, 75, 75);
+}
+
+button {
+    border: none;
+    outline: none;
+    display: block;
+    width: 100%;
+    background-color: #ecf0f1;
+}
+.favorite {
+    /* color: #c0392b; */
+}

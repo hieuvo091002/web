@@ -1,0 +1,9 @@
+<div class="stock-container" [class]="isPositiveChange">
+    <p class="name">{{stock.name + ' - (' + stock.code + ')' }}</p>
+    <p class="price">${{stock.price}}</p>
+    <p class="price">{{changeAmount.toFixed(2) +' ('+ changeRatio.toFixed(2) +'%)'}}</p>
+    <p>{{stock.exchange}}</p>
+    <button (click)="toggleFavorite()" *ngIf="!stock.favorite" [class]="stock.favorite ? 'favorite': ''">Add to Favorite</button>
+    <button (click)="toggleFavorite()" *ngIf="stock.favorite" [class]="!stock.favorite ? 'favorite': ''">Remove to Favorite</button>
+</div>
+

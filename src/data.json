@@ -1,0 +1,56 @@
+{
+    "stocks": [
+      {
+        "id": 1,
+        "name": "Test Stock Company",
+        "code": "TSC",
+        "price": "85",
+        "previousPrice": "80",
+        "exchange": "NASDAQ",
+        "favorite": false
+      },
+      {
+        "id": 2,
+        "name": "Second Stock Company",
+        "code": "SSC",
+        "price": "10",
+        "previousPrice": "20",
+        "exchange": "NSE",
+        "favorite": false
+      },
+      {
+        "id": 3,
+        "name": "Last Stock Company",
+        "code": "LSC",
+        "price": "876",
+        "previousPrice": "765",
+        "exchange": "NYSE",
+        "favorite": false
+      },
+      {
+        "name": "Last Stock Company",
+        "code": "LSC",
+        "price": "876",
+        "previousPrice": "765",
+        "exchange": "NYSE",
+        "favorite": false,
+        "id": 4
+      },
+      {
+        "name": "SunnyLenses",
+        "code": "SLS",
+        "price": 22323,
+        "previousPrice": 22323,
+        "exchange": "NASDAQ",
+        "favorite": false
+      },
+      {
+        "name": "FaceBook",
+        "code": "FB",
+        "price": 932,
+        "previousPrice": 932,
+        "exchange": "MEME",
+        "favorite": false
+      }
+    ]
+  }
